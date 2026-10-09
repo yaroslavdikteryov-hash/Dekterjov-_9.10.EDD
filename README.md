@@ -240,29 +240,36 @@ Izvēlies vienu no 4.–9. uzdevuma. ĢEDD pierādījumiem jābūt divos failos:
 
 Norādi faila nosaukumu, ievadi, sagaidāmo rezultātu un īsi paskaidro algoritma darbības.
 
+Faila nosaukums: 04_summa_lidz_n.py
+Programma aprēķina visu naturālo skaitļu summu no 1 līdz ievadītajam skaitlim. Ja ievada negatīvu skaitli, nulli vai nederīgu ievadi, programma parāda atbilstošu paziņojumu.
+
 ## 2. Izpildes izsekošana
 
 Izvēlies vienu konkrētu ievadi un pieraksti mainīgo vērtības pa soļiem.
 
 ```markdown
 | Solis | Nosacījums | Mainīgie pirms | Veiktā darbība | Mainīgie pēc | Izvade |
-|------:|------------|-----------------|----------------|----------------|--------|
-| 0     | —          |                 | Sākums         |                |        |
-| 1     |            |                 |                |                |        |
-| 2     |            |                 |                |                |        |
+| 1 | n <= 0: nē | n = 3 | Izpilda else un piešķir summa = 0 | n = 3, summa = 0 | — |
+| 2 | Ciklā i = 1 | n = 3, summa = 0 | summa = 0 + 1 | n = 3, i = 1, summa = 1 | — |
+| 3 | Ciklā i = 2 | n = 3, i = 1, summa = 1 | summa = 1 + 2 | n = 3, i = 2, summa = 3 | — |
+| 4 | Ciklā i = 3 | n = 3, i = 2, summa = 3 | summa = 3 + 3 | n = 3, i = 3, summa = 6 | — |
+| 5 | Cikls beidzies | n = 3, i = 3, summa = 6 | Izvada summu | n = 3, i = 3, summa = 6 | Summa: 6 |
 ```
 
 ## 3. Testa piemēri
 
 Izveido vismaz četrus atšķirīgus testus.
 
+
 ```markdown
 | Testa veids | Ievade | Sagaidāmais rezultāts | Faktiskais rezultāts | Tests izturēts? |
 |-------------|--------|-----------------------|---------------------|-----------------|
-| Tipisks     |        |                       |                     |                 |
-| Robežgadījums |      |                       |                     |                 |
-| Tukša vai nederīga ievade | |                 |                     |                 |
-| Papildu tests |      |                       |                     |                 |
+| Tipisks | 5 | Summa: 15 | | |
+| Robežgadījums | 1 | Summa: 1 | | |
+| Nederīga ievade | 0 | Kļūda: skaitlim jābūt lielākam par 0. | | |
+| Papildu tests | -2 | Kļūda: skaitlim jābūt lielākam par 0. | | |
+| Tukša ievade | Tukša rinda | Kļūda: ievadi veselu skaitli. | | |
+| Nederīga ievade | abc | Kļūda: ievadi veselu skaitli. | | |
 ```
 
 ## 4. Kļūda, pretpiemērs vai uzlabojums
@@ -270,6 +277,10 @@ Izveido vismaz četrus atšķirīgus testus.
 Ja tests atklāj kļūdu, pieraksti ievadi, sagaidāmo rezultātu, faktisko rezultātu, kļūdas cēloni un labojumu.
 
 Ja programma visus testus iztur, izvēlies agrāku kļūdainu `commit` vai paskaidro, kura ievade radītu kļūdu bez vienas no tavām pārbaudēm.
+
+Sagaidāmais rezultāts: saprotams kļūdas paziņojums.
+Bez try un except ValueError programma beigtos ar ValueError kļūdu,
+jo int() nevar pārvērst tekstu abc par veselu skaitli.
 
 **Ieteiktais commit:** `Pievienots algoritms un tā testi`
 
