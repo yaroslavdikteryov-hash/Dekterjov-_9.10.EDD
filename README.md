@@ -1,5 +1,5 @@
 [README.md](https://github.com/user-attachments/files/33236381/README.md)
-# 9.10.-Programm-anas-EDD# 
+# Dekterjov 9.10.-Programm-anas-EDD 
 
 Programmēšanas un algoritmu ĢEDD
 
